@@ -9,7 +9,7 @@
         <Setter Property="TextOptions.TextRenderingMode" Value="Auto" />
         <Setter Property="WindowChrome.WindowChrome">
             <Setter.Value>
-                <WindowChrome CaptionHeight="25" CornerRadius="0" ResizeBorderThickness="10"
+                <WindowChrome CaptionHeight="25" CornerRadius="0" ResizeBorderThickness="8"
                               NonClientFrameEdges ="None" UseAeroCaptionButtons="False" GlassFrameThickness="0"/>
             </Setter.Value>
         </Setter>
@@ -26,10 +26,10 @@
                             <Grid>
                                 <ContentPresenter Margin="0,0,0,0"/>
                                 <DockPanel DockPanel.Dock="Top" LastChildFill="False">
-                                    <DockPanel DockPanel.Dock="Top" LastChildFill="False">
+                                    <DockPanel DockPanel.Dock="Top" LastChildFill="False" Height="40">
                                         <TextBlock Text="{TemplateBinding Title}" DockPanel.Dock="Left" Margin="10,3,0,0" VerticalAlignment="Center"
                                                    Opacity="0.75" Style="{DynamicResource BaseTextBlockStyle}" x:Name="PART_TextTitle" />
-                                        <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Margin="0,3,5,0">
+                                        <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Margin="0,5,5,0">
                                             <Button Style="{DynamicResource WindowBarButton}" Content="0" x:Name="PART_ButtonMinimize"/>
                                             <Button Style="{DynamicResource WindowBarButton}" Content="1" x:Name="PART_ButtonMaximize" />
                                             <Button Style="{DynamicResource WindowBarButton}" Content="r" x:Name="PART_ButtonClose"/>
@@ -42,7 +42,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="WindowState" Value="Maximized">
                             <Setter Property="Content" Value="2" TargetName="PART_ButtonMaximize"/>
-                            <Setter Property="Padding" Value="8" TargetName="WindowBorder"/>
+                            <Setter Property="Padding" Value="3" TargetName="WindowBorder"/>
                         </Trigger>
                         <DataTrigger Binding="{Binding HasChildWindow, Mode=OneWay, RelativeSource={RelativeSource Self}, TargetNullValue=False}" Value="True">
                             <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}" TargetName="WindowBorder"/>
