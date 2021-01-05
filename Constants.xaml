@@ -23,9 +23,9 @@
     <CornerRadius x:Key="ControlCornerRadius">12</CornerRadius>
     <CornerRadius x:Key="ControlCornerRadiusViewPlayButtons">20</CornerRadius>
     <CornerRadius x:Key="ControlCornerRadiusSmall">0</CornerRadius>
-    <CornerRadius x:Key="MainMenuCornerRadius">5</CornerRadius>
-    <CornerRadius x:Key="TrayMenuCornerRadius">5</CornerRadius>
-    <CornerRadius x:Key="TooltipCornerRadius">5</CornerRadius>
+    <CornerRadius x:Key="MainMenuCornerRadius">0</CornerRadius>
+    <CornerRadius x:Key="TrayMenuCornerRadius">0</CornerRadius>
+    <CornerRadius x:Key="TooltipCornerRadius">0</CornerRadius>
     <CornerRadius x:Key="GridViewCoverCornerRadius">0</CornerRadius><!--5-->
     <CornerRadius x:Key="GridViewCoverGridBackgroundDisabledCornerRadius">0,0,0,0</CornerRadius><!--5,5,0,0-->
     <CornerRadius x:Key="GridViewShowGameNameCornerRadius">0,0,0,0</CornerRadius><!--0,0,5,5-->

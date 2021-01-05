@@ -51,9 +51,35 @@
                                            VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             </Border>
 
+                            <Button Name="PART_ButtonSteamFriends"
+                                    WindowChrome.IsHitTestVisibleInChrome="True"
+                                    ToolTip="{DynamicResource LOCSteamFriendsTooltip}"
+                                    DockPanel.Dock="Right" Margin="10,6,0,6">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+                                        <Setter Property="Background" Value="Transparent" />
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate>
+                                                    <Border Style="{DynamicResource HighlightBorder}"
+                                                        Background="{TemplateBinding Background}">
+                                                        <Grid>
+                                                            <TextBlock Text="&#xecf9;" FontFamily="{StaticResource FontIcoFont}" FontSize="24"
+                                                                       Foreground="{TemplateBinding Foreground}"
+                                                                       VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,5,0"/>
+                                                        </Grid>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                            
                             <CheckBox x:Name="PART_ToggleFilter"
                                       WindowChrome.IsHitTestVisibleInChrome="True"
-                                      DockPanel.Dock="Left" Margin="10,6,0,6" MinWidth="35">
+                                      DockPanel.Dock="Right" Margin="10,6,0,6" MinWidth="35">
                                 <CheckBox.Style>
                                     <Style TargetType="CheckBox">
                                         <Setter Property="Background" Value="Transparent" />
@@ -88,32 +114,6 @@
                                     </Style>
                                 </CheckBox.Style>
                             </CheckBox>
-                            
-                            <Button Name="PART_ButtonSteamFriends"
-                                    WindowChrome.IsHitTestVisibleInChrome="True"
-                                    ToolTip="{DynamicResource LOCSteamFriendsTooltip}"
-                                    Margin="10,6,0,6">
-                                <Button.Style>
-                                    <Style TargetType="Button">
-                                        <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
-                                        <Setter Property="Background" Value="Transparent" />
-                                        <Setter Property="Template">
-                                            <Setter.Value>
-                                                <ControlTemplate>
-                                                    <Border Style="{DynamicResource HighlightBorder}"
-                                                        Background="{TemplateBinding Background}">
-                                                        <Grid>
-                                                            <TextBlock Text="&#xecf9;" FontFamily="{StaticResource FontIcoFont}" FontSize="24"
-                                                                       Foreground="{TemplateBinding Foreground}"
-                                                                       VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,5,0"/>
-                                                        </Grid>
-                                                    </Border>
-                                                </ControlTemplate>
-                                            </Setter.Value>
-                                        </Setter>
-                                    </Style>
-                                </Button.Style>
-                            </Button>
 
                             <CheckBox x:Name="PART_ToggleNotifications"
                                         WindowChrome.IsHitTestVisibleInChrome="True"
